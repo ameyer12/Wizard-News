@@ -1,6 +1,9 @@
+const html = require("html-template-tag");
+
 const postDetails = (post) => {
-    const html =  
-    `<html>
+    return html`
+    <!DOCTYPE html>
+    <html>
     <body>
       <div class="news-list">
         <header><img src="/logo.png"/>Wizard News</header>
@@ -19,7 +22,6 @@ const postDetails = (post) => {
         </div>
     </body>
   </html>`
-    return html
 }
 
 module.exports = postDetails;

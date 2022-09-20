@@ -1,7 +1,10 @@
+const html = require("html-template-tag");
+
 const timeAgo = require('node-time-ago');
 
 const postList = (posts) => {
-  const html = `<!DOCTYPE html>
+  return html`
+  <!DOCTYPE html>
   <html>
   <head>
     <title>Wizard News</title>
@@ -20,12 +23,9 @@ const postList = (posts) => {
           ${post.upvotes} upvotes | ${timeAgo(post.date)}
         </small>
        </div>`
-      ).join('')}
-    </div>
+      )}
   </body>
   </html>`
-
-  return html
 }
 
 module.exports = postList;

@@ -1,5 +1,7 @@
+const html = require("html-template-tag");
+
 const errorPage = () => {
-    const html = `
+    return html`
     <!DOCTYPE html>
     <html>
     <head>
@@ -14,7 +16,6 @@ const errorPage = () => {
       </div>
     </body>
     </html>`
-    return html
 }
 
 module.exports = errorPage;
